@@ -90,8 +90,8 @@ const unload = onExit(
     console.log('Exit with signal', signal);
 
     if (LiveAssets) {
-      // @ts-expect-error Error in types: `destroy` is called `destory`.
-      LiveAssets.destroy();
+      // Typo remains in the npm package, but corrected on GitHub.
+      LiveAssets.destory();
     }
 
     const exited = app.close();
