@@ -1,0 +1,43 @@
+{
+  "name": "hyper-express-vite-vue",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "A Vite+Vue SSR application example working with HyperExpress.",
+  "author": {
+    "name": "Benoît Lahoz",
+    "email": "info@benoitlahoz.io"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node  --no-warnings=ExperimentalWarning --loader ts-node/esm src/server/index.ts",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/client/entry-server.ts --outDir dist/server",
+    "preview": "cross-env NODE_ENV=production node --no-warnings=ExperimentalWarning --loader ts-node/esm src/server/index.ts",
+    "check": "vue-tsc"
+  },
+  "keywords": [
+    "hyper-express",
+    "ssr",
+    "vite",
+    "vue",
+    "expressjs"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/language-plugin-pug": "^2.1.10",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vue-tsc": "^2.1.10"
+  },
+  "dependencies": {
+    "hyper-express": "https://github.com/benoitlahoz/hyper-express",
+    "live-directory": "^3.0.3",
+    "signal-exit": "^4.1.0",
+    "vue": "^3.5.13"
+  }
+}
