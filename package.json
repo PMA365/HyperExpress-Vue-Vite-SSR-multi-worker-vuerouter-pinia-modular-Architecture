@@ -2,7 +2,7 @@
   "name": "hyper-express-vite-vue",
   "version": "0.0.1",
   "license": "MIT",
-  "description": "A Vite+Vue SSR application example working with HyperExpress.",
+  "description": "A Vite+Vue SSR application example working with HyperExpress and LiveDirectory.",
   "author": {
     "name": "Benoît Lahoz",
     "email": "info@benoitlahoz.io"
@@ -19,6 +19,7 @@
   },
   "keywords": [
     "hyper-express",
+    "live-directory",
     "ssr",
     "vite",
     "vue",
