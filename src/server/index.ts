@@ -15,7 +15,10 @@ const templateHtml = isProduction
   : '';
 
 // Create http server
-const app = new HyperExpress.Server();
+const app = new HyperExpress.Server({
+  // Autoclose doesn't work properly (at least with development server) -> close in clean exit handler.
+  auto_close: false,
+});
 
 // Add Vite or respective production middlewares
 /** @type {import('vite').ViteDevServer | undefined} */
@@ -97,7 +100,7 @@ const unload = onExit(
     const exited = app.close();
 
     if (exited) {
-      console.log('Server was gracefully closed.');
+      console.log('Server was closed.');
     } else {
       console.warn('There was a problem while closing server.');
     }
