@@ -87,7 +87,7 @@ const unload = onExit(
     _code: number | null | undefined,
     signal: NodeJS.Signals | null
   ): true | void => {
-    console.log('Exit with signal', signal);
+    console.log('\nExit with signal', signal);
 
     if (LiveAssets) {
       // Typo remains in the npm package, but corrected on GitHub.
