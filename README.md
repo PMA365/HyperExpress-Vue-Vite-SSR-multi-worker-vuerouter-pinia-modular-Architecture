@@ -1,5 +1,7 @@
 # Vue 3 + HyperExpress + Vite SSR
 
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-%230074c1.svg)](http://www.typescriptlang.org/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
 This **experimental** template introduces a way to use [HyperExpress](https://github.com/kartikk221/hyper-express) as server and [LiveDirectory](https://github.com/kartikk221/live-directory) to serve static files, in a server-side rendered site.
 
 It is based on [create-vite-extra](https://github.com/bluwy/create-vite-extra/tree/master) template [template-ssr-vue-ts](https://github.com/bluwy/create-vite-extra/tree/master/template-ssr-vue-ts). It might be useful to look at the difference between the two implementations.
