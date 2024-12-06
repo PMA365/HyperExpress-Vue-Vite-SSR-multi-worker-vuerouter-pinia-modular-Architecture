@@ -738,7 +738,7 @@ he@^1.2.0:
 
 "hyper-express@https://github.com/benoitlahoz/hyper-express":
   version "6.17.3"
-  resolved "https://github.com/benoitlahoz/hyper-express#cb1588f87ad5bdf2fed9e98a674a8d23a998c4f4"
+  resolved "https://github.com/benoitlahoz/hyper-express#54c478334a1b2faf8206c6037b68feed704eab1e"
   dependencies:
     busboy "^1.6.0"
     cookie "^1.0.1"
