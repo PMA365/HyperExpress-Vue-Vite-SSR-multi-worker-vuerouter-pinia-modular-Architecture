@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import LiveDirectory from 'live-directory';
+import type { MiddlewareNext, Request, Response } from 'hyper-express';
 
 export const createLiveDirectory = (path: string) =>
   new LiveDirectory(path, {
@@ -24,7 +25,7 @@ export const createLiveDirectory = (path: string) =>
   });
 
 export const staticMiddleware = (directory: LiveDirectory) => {
-  return async (request: any, response: any, next: any) => {
+  return async (request: Request, response: Response, next: MiddlewareNext) => {
     const file = directory.get(request.path);
 
     // Bypass if no file was passed.
