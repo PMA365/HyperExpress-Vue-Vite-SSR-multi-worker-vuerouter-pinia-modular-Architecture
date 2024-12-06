@@ -1,8 +1,8 @@
 # Vue 3 + HyperExpress + Vite SSR
 
-This experimental template introduces a way to use [HyperExpress](https://github.com/kartikk221/hyper-express) as server and [LiveDirectory](https://github.com/kartikk221/live-directory) to serve static files, in a server-side rendered site.
+This **experimental** template introduces a way to use [HyperExpress](https://github.com/kartikk221/hyper-express) as server and [LiveDirectory](https://github.com/kartikk221/live-directory) to serve static files, in a server-side rendered site.
 
-It is based on [create-vite-extra](https://github.com/bluwy/create-vite-extra/tree/master) template [template-ssr-vue-ts](https://github.com/bluwy/create-vite-extra/tree/master/template-ssr-vue-ts).
+It is based on [create-vite-extra](https://github.com/bluwy/create-vite-extra/tree/master) template [template-ssr-vue-ts](https://github.com/bluwy/create-vite-extra/tree/master/template-ssr-vue-ts). It might be useful to look at the difference between the two implementations.
 
 ## Motivation
 
