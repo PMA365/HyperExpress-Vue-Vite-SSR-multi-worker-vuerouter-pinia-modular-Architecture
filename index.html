@@ -12,13 +12,16 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Vite + Vue + TS</title>
-    <!--app-head-->
+    <!--app-head--> 
   </head>
   <body>
     <div id="app"><!--app-html--></div>
+    <script>
+      window.__PINIA_STATE__ = '<!--pinia-state-->'
+    </script>
     <script
       type="module"
-      src="/src/client/entry-client.ts"
+      src="/src/client/entry-client.js"
     ></script>
   </body>
 </html>

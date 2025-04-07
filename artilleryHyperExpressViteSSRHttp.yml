@@ -1,0 +1,42 @@
+# artilleryHyperExpressHttp.yml
+#  $ artillery run artilleryHyperExpressHttp.yml
+
+# using 2 core and 4 threads
+# artillery run artilleryHyperExpressViteSSRHttp.yml  --record --key a9_b_pPUGSRpvGlEDbIKmNH1-sdrVe2cfIB
+# artillery run artilleryHyperExpressViteSSRHttp.yml  --record --key a9_b_pPUGSRpvGlEDbIKmNH1-sdrVe2cfIB
+
+# config:
+#   target: http://127.0.0.1:5173
+#   phases:
+#     - name: Max load
+#       rampTo: 1
+#       duration: 15
+#       arrivalRate: 800
+#   plugins:
+#     metrics-by-endpoint:
+#       suppressOutput: true
+#       stripQueryString: true
+config:
+  maxConnections: 80000
+  target: "http://127.0.0.1:5173" # Replace with your server URL
+  phases:
+    - duration: 20
+      arrivalRate: 5
+      rampTo: 10
+      name: "Warming up"
+    - duration: 10
+      arrivalRate: 3000
+      rampTo: 10000
+      name: "Max load"
+  defaults:
+    headers:
+      # content-type: "application/json" /
+      Content-Type: application/json
+      User-Agent: insomnia/10.3.1
+
+scenarios:
+  - name: "Test homepage"
+    flow:
+      - get:
+          url: "/" # Endpoint to test
+
