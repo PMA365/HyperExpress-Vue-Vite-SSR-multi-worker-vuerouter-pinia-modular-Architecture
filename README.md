@@ -58,10 +58,10 @@ pnpm add --save-dev jsdoc
 
 ---
 
-[!NOTE] you should add this line to your tsconfig.json
-to solve the cannot import pinia problem
-The "resolvePackageJsonExports": false option tells the TypeScript compiler to not resolve package.json exports.
-This can help resolve issues with dependencies that have incorrect or missing exports in their package.json files
+> **Note:** you should add this line to your tsconfig.json
+> to solve the cannot import pinia problem
+> The "resolvePackageJsonExports": false option tells the TypeScript compiler to not resolve package.json exports.
+> This can help resolve issues with dependencies that have incorrect or missing exports in their package.json files
 
 ```bash
 "compilerOptions": {
