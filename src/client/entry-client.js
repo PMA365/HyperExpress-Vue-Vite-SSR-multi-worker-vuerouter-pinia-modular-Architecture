@@ -1,9 +1,11 @@
 import "./style.css";
 import { createApp } from "./main.js";
 
-const { app, router, pinia } = createApp();
+const { app, pinia, router } = createApp();
 
 // Hydrate state if available
+// Add this before mounting
+// console.log("Client state:", pinia.state.value);
 // @ts-ignore
 if (window.__PINIA_STATE__) {
 	try {

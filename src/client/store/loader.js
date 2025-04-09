@@ -43,7 +43,7 @@ export function registerModuleStore(name, storeSetup) {
  * @returns {import('pinia').Store[]}
  */
 export function initializeModuleStores() {
-	console.debug(`Initializing ${moduleStores.length} module stores`);
+	// console.debug(`Initializing ${moduleStores.length} module stores`);
 
 	return moduleStores
 		.map((setupFn) => {

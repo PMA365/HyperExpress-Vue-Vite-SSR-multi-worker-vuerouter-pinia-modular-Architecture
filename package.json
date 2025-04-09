@@ -27,7 +27,6 @@
 	],
 	"devDependencies": {
 		"@sentry/vite-plugin": "^3.2.4",
-		"@types/node": "^22.10.1",
 		"@vitejs/plugin-vue": "^5.2.3",
 		"@vue/language-plugin-pug": "^2.1.10",
 		"cross-env": "^7.0.3",

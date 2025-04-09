@@ -70,3 +70,16 @@ pnpm add --save-dev jsdoc
 
 }
 ```
+
+---
+
+> [!NOTE]
+
+Pinia Store in SSR
+In an SSR (Server Side Rendering) application, a memory leak can occur if a getter is accessed in the server-side rendering process, as noted in a discussion on GitHub.
+This issue arises because the store is recreated for each request, and if a getter is cached or accessed improperly, it can lead to memory leaks. To prevent this, one approach is to avoid caching getters on the server side or to ensure that getters are not accessed before the state is properly hydrated.
+
+Additionally, it's important to ensure that the Pinia instance is passed to any useStore calls when running SSR to prevent cross-request state pollution.
+This means that if you are using a getter within a store action, you should pass the Pinia instance explicitly to avoid potential state leaks between concurrent sessions.
+
+Therefore, while removing the Pinia store entirely is not the recommended approach, ensuring proper handling of getters and passing the Pinia instance correctly can help mitigate memory leaks in SSR applications.

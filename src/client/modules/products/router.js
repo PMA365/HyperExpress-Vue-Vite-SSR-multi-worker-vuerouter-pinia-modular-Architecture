@@ -8,7 +8,7 @@ export const moduleRoute = [
 		component: Module,
 		children: [
 			{
-				path: "/",
+				path: "",
 				name: "products",
 				component: Home,
 			},

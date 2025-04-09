@@ -28,8 +28,8 @@ routes.push(...homeModuleRoutes);
 routes.push(...productsModuleRoutes);
 
 export function createRouter() {
-	console.log("routes inside createRouter");
-	console.log(routes);
+	// console.log("routes inside createRouter");
+	// console.log(routes);
 
 	return _createRouter({
 		history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),

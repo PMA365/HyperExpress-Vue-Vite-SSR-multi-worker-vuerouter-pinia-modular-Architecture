@@ -5,6 +5,8 @@ import App from "../client/App.vue";
 import { initializeModuleStores } from "./store/loader";
 // import { registerModules } from "./register-modules";
 
+// Add a module-level flag to track initialization
+let storesInitialized = false;
 // import homeModule from "./modules/home/index.js";
 // try {
 // 	registerModules({
@@ -25,27 +27,17 @@ export function createApp() {
 	// const { pinia } = setupStore(app);
 	const pinia = createPinia();
 	const router = createRouter();
+
 	// Register Pinia
 	app.use(pinia);
 	// Register router
 	app.use(router);
 
-	// Initialize all module stores
-	initializeModuleStores();
-
-	return { app, router, pinia };
-}
-// Mount app when running in browser
-if (typeof window !== "undefined") {
-	const { app, pinia } = createApp();
-
-	// Hydrate state if available
-	// @ts-ignore
-	if (window.__INITIAL_STATE__) {
-		// @ts-ignore
-		pinia.state.value = JSON.parse(window.__INITIAL_STATE__);
+	// Initialize all module stores only once
+	if (!storesInitialized) {
+		initializeModuleStores();
+		storesInitialized = true;
 	}
 
-	// Wait for router to be ready before mounting
-	app.mount("#app");
+	return { app, router, pinia };
 }

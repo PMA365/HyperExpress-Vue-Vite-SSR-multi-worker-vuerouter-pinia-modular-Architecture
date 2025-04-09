@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 const count = ref(0);
-const msg = ref("Hello Vue!"); // Adding the missing msg variable
+const msg = ref("This is Index View of Products!"); // Adding the missing msg variable
 </script>
 
 <template>
